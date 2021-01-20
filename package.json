@@ -1,0 +1,22 @@
+{
+  "name": "python-html-generate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "json:tscompile": "tsc script.ts",
+    "json:run": "node script.js",
+    "json:cleanup": "rm -r ./data/**/*.js && rm -r ./types/*.js && rm -r script.js",
+    "json": "run-s json:*",
+    "generate": "python generate.py && rm ./data.json"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.22",
+    "fs": "^0.0.1-security",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.1.3"
+  }
+}
