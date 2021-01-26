@@ -14,7 +14,7 @@ template = env.get_template('page.html')
 # 3.テンプレートにデータの流し込み
 build_dir = 'dist'
 # distディレクトリの存在を確認。なければ作成する
-if os.path.isdir(build_dir) == False:
+if not os.path.isdir(build_dir):
   os.mkdir(build_dir)
 
 # データ配列の数だけ実行
